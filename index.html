@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- 
+        ■ L'attribut alt signifie "alternative text", il sert à donner des informations de l'image qu'il représente.
+
+        ■ Ce texte sera affiché à côté d'une petite icône "d'image cassée" si l'image n'a pas pu être téléchargée.
+
+        ■ Ce texte est également lu par les lecteurs d'écran, les logiciels qui aident des personnes en situation de handicap à lire les pages web.
+
+        ■ Il est aussi utile aux "crawlers" des moteurs de recherche afin d'indexer la page qu'ils analysent.
+
+        Le but du texte alternatif est de décrire fidèlement le contenu et / ou la fonctionnalité de l'image.
+        Néanmoins, il n'est pas toujours obligatoire de le remplir, voyons les cas d'utilisation possibles...
+    -->
+
+    <!-- 
+        1. Image fonctionnelle
+    
+        Image liée à une action, comme dans un lien ou un bouton.
+        Le texte doit décrire l'action et non l'image.
+        Ex : Imprimer cette page, afficher un article, aller à la page de contact...
+    -->
+
+    <!-- A. Une image qui représente un logo dans un lien -->
+    <a href="#">
+        <img src="images/montagepro-logo.jpg" alt="page d'accueil MontagePro">
+    </a>
+
+
+    <!-- B. Une image dans un lien ou un bouton qui rajoute des informations au texte déjà présent -->
+    <a href="#" target="_blank">
+        Rapport annuel 2022 <img src="images/pdf-logo.svg" alt="ouvrir au format PDF dans une autre page">
+    </a>
+
+    <!-- C. Une image seule qui sert à renseigner une action, souvent dans un lien ou un bouton. -->
+
+    <button class="copy-btn">
+        <img src="images/copy-logo.svg" alt="Copier ce code dans le presse-papiers">
+    </button>
+
+    <!-- 
+        2. Images décoratives
+
+        Ce sont des images qui servent à décorer une page, on doit placer un attribut alt vide pour ces dernières.
+        
+        Le jugement se fait selon le développeur, ces images peuvent être :
+        - Des décorations de bordures
+        - Des petits logos 
+        - Des images qui servent à embellir une page (petites ou grandes)
+        - Des grandes images de fond pour habiller certaines sections (on préférera la propriété background-image)
+    -->
+
+    <!-- A. Image de décoration d'un lien avec du texte -->
+    <!-- Attention, s'il n'y a pas de texte, ça devient une image fonctionnelle. -->
+    <button>
+        <img src="images/taxes-logo.svg" alt="">
+        Calculer les taxes
+    </button>
+
+    <!-- B. Une image décorative -->
+    <!-- Elle ne montre pas une université en particulier, ni un étudiant dont on parlerait, elle sert seulement à améliorer le design général en faisant une référence à ce qui est écrit à côté. 
+    Dans le cas contraire, elle devrait être traitée comme une image informative et on devrait remplir son alt. -->
+
+    <div>
+        <img src="images/university-students" alt="">
+        <p>Tous nos employées ont un master en Comptabilité.</p>
+    </div>
+
+    <!-- 
+        3. Images informatives
+
+        Elles ne décrivent pas une fonctionnalité mais servent plutôt de label à du texte. 
+     -->
+
+     <!-- A. Label d'un texte -->
+     <p>
+        <img src="images/profil.svg" alt="Votre nom"> <span>John Doe</span>
+     </p>
+     <p>
+        <img src="images/address.svg" alt="Votre adresse"> <span>6 rue des acacias</span>
+     </p>
+
+     <!-- B. Supplément d'info d'un texte, comme dans une page wikipédia par exemple -->
+     
+     <div>
+        <img src="images/johntravolta.jpg" alt="Bryan Cranston complètement chauve en 2023">
+        <p>Bryan Cranston a décidé de changer de vie à partir de l'année 2023...</p>
+     </div>
+
+     <!-- C. Image importante en rapport avec le thème de la page -->
+     <img src="images/restaurant-brigadeiro.jpg" alt="Toute l'équipe du restaurant Brigadeiro">
+
+  </body>
+</html>
